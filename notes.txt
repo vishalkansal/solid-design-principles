@@ -58,5 +58,7 @@ How to detect SRP violation
 Open closed: whenever i add a new feature to my code base my code should be open for extension but closed for modification.
 open for extension -> it should be easy to add new feature.
 closed for modification -> adding a feature should require very little change to already existing code
+// if i have to add a new bird i will have to add new if else but now we can make a new class of species and i am done
 
-
+//
+Liskov substitution Principle
