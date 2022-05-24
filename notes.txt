@@ -1,0 +1,62 @@
+Solid design principles:
+S - Single Responsibility Principle
+O - Open Closed Principle
+L - Liskov Substitution Principle
+I - Interface Segregation
+D - Dependency Inversion
+
+
+terms related to D are -> dependency injection , inversion of control(IOC)
+
+Design a bird ->
+
+Procedural programming:
+A program is executing a series of procedures executing one after other in a particular order.
+Start of a program is a special procedure (main function )
+not OOP
+
+
+class Person{
+String name;
+String age;
+String city;       
+void walk(){}
+void eat(){}
+}
+
+OOPS: Program is nothing but different set of entities . Each entity is having some behaviour associated to it.
+Program is nothing but different entities performing different behaviour one after the other
+
+Entities :               Class
+1. Attributes             Fields
+2. Behaviour              Methods
+
+
+SRS: Any code unit (class / method /paclage should have only one responsibility)
+should have exactly one well defined responsibility-----a reason to change
+
+
+
+void fly(){
+if(species=="crow"){}
+if(species=="hen"){}
+......
+
+}
+
+violation of SRS : fly method is responsible for every type of bird
+when will this get changed?
+1 when a new species will be added
+2. when a behavioue of alreaded added species needs to change
+
+How to detect SRP violation 
+1. A lot of if else >99% it is violation of SRP
+2. Monster method -> has a code to do a lot more thing than whats its name asking it to do.
+3. util package is bad idea -> even java util is bad 
+
+//
+Open closed: whenever i add a new feature to my code base my code should be open for extension but closed for modification.
+open for extension -> it should be easy to add new feature.
+closed for modification -> adding a feature should require very little change to already existing code
+
+
