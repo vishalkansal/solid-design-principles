@@ -1,3 +1,5 @@
+//https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/ link for solid
+
 Solid design principles:
 S - Single Responsibility Principle
 O - Open Closed Principle
@@ -62,3 +64,28 @@ closed for modification -> adding a feature should require very little change to
 
 //
 Liskov substitution Principle
+Any variable of parent class should be as as substitutable by an object of any child class without requiring any code change
+i.e. remove fly method from bird class
+Make a interface Flyable and implements that in the Pigeon, Hen and all species who can fly class.
+
+
+--------------------------
+1. Some birds can fly
+2. some birds can eat
+3. any bird who can eat can also drink
+4. No other bird can drink
+Interface Segregation Principle:
+Interfaces should be as light as possible
+Keep interface smaller.Dont make them thick -> so make two different interfaces with eat and drink 
+Lambda functions are interfaces with one method
+
+Dependency Inversion: No 2 concrete classes should depend on each other directly. They should depend on each other via interface
+-> Never code to an implementation(class) code to a interface
+
+List<XYZ> l = new ArrayList<>();
+l.add();
+l.remove();
+l.pop();
+add, remove and pop are declared in interfaces .
+Now i decided to change it so i can simply do
+List<XYZ> l = new LinkedList<>(); and no other change is required
